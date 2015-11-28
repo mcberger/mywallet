@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mywallet</title>
+  <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+	<%if current_user %>
+		<%= link_to 'logout', logout_path, method: 'delete' %>
+	<% else %>
+		<%= link_to 'login', login_path %>
+	<% end %>
+
+	<%= flash[:notice] if flash[:notice] %>
+	<%= flash[:alert] if flash[:alert] %>
+
+
+	<!-- 
+	the loading icon
+	<div id="loader">
+	test
+		<img src="http://www.ajaxload.info/cache/FF/FF/FF/E5/0D/B7/5-0.gif">
+	</div> -->
+
+	<ul>
+		<li> <%= link_to 'Users', users_path %> </li>
+		<li> <%= link_to 'Cards', user_cards_path(current_user)%> </li>
+	</ul>
+
+	<%= yield %>
+</div>
+</body>
+</html>

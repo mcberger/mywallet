@@ -1,0 +1,26 @@
+<% if @card.errors.full_messages.any?%>
+	<ul>
+		<% @card.errors.full_messages.each do |error_message| %>
+			<li> <%= error_message %> </li> <br>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @card, url: user_cards_path(@user) do |f| %>
+	<%= f.label :cardnumber, 'Card number:' %>
+	<%= f.text_field :cardnumber %>
+	<br><br>
+	<%= f.label :expmonth, 'Expiration month:' %>
+	<%= f.text_field :expmonth %>
+	<br><br>
+	<%= f.label :expyear, 'Expiration year:' %>
+	<%= f.text_field :expyear %>
+	<br><br>
+	<%= f.label :balance, 'Balance:' %>
+	<%= f.text_field :balance %>
+	<br><br>
+	<%= f.label :share_with, 'Share card with (email address):' %>
+	<%= f.text_field :share_with %>
+	<br><br>
+	<%= f.submit :'Add card' %>
+<% end %>

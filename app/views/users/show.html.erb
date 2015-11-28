@@ -1,0 +1,21 @@
+<b>First name: </b><%= @user.fname %>
+<br>
+<b>Last name: </b><%= @user.lname %>
+<br>
+<b>Email: </b><%= @user.email %>
+<br>
+<b>Phone number: </b><%= @user.phone %>
+<br>
+<b>Avatar: </b><%= image_tag @user.avatar.url(:thumb) %>
+<br><br>
+
+<%= link_to 'Add card', new_user_card_path(@user) %>
+
+
+<h2> Your cards: </h2>
+<% @user.cards.each do |card| %>
+	<%= render 'cards/card', card: card %>
+<% end %>
+
+<h2> Your balance: </h2>
+<%= @balance %>

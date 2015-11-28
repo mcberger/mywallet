@@ -1,0 +1,3 @@
+// alert('Your card was saved!');
+//$('#new_card').html('<h1> Your card was saved </h1>');
+ $('#new_card').html("<%= escape_javascript(render @card) %>");

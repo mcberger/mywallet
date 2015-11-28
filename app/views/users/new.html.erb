@@ -1,0 +1,28 @@
+<% if @user.errors.full_messages.any?%>
+	<ul>
+		<% @user.errors.full_messages.each do |error_message| %>
+			<li> <%= error_message %> </li> <br>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+	<%= f.label :fname, 'First name:' %>
+	<%= f.text_field :fname %>
+	<br><br>
+	<%= f.label :lname, 'Last name:' %>
+	<%= f.text_field :lname %>
+	<br><br>
+	<%= f.label :email, 'Email:' %>
+	<%= f.text_field :email %>
+	<br><br>
+	<%= f.label :phone, 'Phone number:' %>
+	<%= f.telephone_field :phone %>
+	<br><br>
+	<%= f.file_field :avatar %>
+	<br><br>
+	<%= f.label :password, 'Password:' %>
+	<%= f.password_field :password %>
+	<br><br>
+	<%= f.submit :'sign up' %>
+<% end %>

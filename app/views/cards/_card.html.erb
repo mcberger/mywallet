@@ -1,0 +1,13 @@
+<ul>
+	<li><b> Card number: </b><%= card.cardnumber %> </li>
+	<li><b> Card type: </b><%= card.cardtype %> </li>
+	<li><b> Card expiration date: </b><%= card.expmonth%> / <%= card.expyear %> </li>
+	<li><b> Balance: <%= card.balance %> </b></li>
+		<%= link_to 'Delete card', user_card_path(current_user, card), method: :delete %>
+</ul>
+
+<% if card.users.include?(current_user) %>
+	<%= link_to "remove card", remove_card_path(:id => card.id), method: :post  %> 
+<% else %>
+	<%= link_to "add card", add_card_path(id: card.id), method: :post  %>
+<% end %>
