@@ -33,7 +33,10 @@
 
 	<ul>
 		<li> <%= link_to 'Users', users_path %> </li>
+		<%if current_user %>
 		<li> <%= link_to 'Cards', user_cards_path(current_user)%> </li>
+		<% else %>
+		<% end %>
 	</ul>
 
 	<%= yield %>
