@@ -1,0 +1,48 @@
+[ 2015-12-08 11:19:45.4150 6102/7feca2941780 age/Wat/WatchdogMain.cpp:1276 ]: Starting Passenger watchdog...
+[ 2015-12-08 11:19:45.4184 6105/7f7953dd4780 age/Cor/CoreMain.cpp:957 ]: Starting Passenger core...
+[ 2015-12-08 11:19:45.4185 6105/7f7953dd4780 age/Cor/CoreMain.cpp:234 ]: Passenger core running in multi-application mode.
+[ 2015-12-08 11:19:45.4196 6105/7f7953dd4780 age/Cor/CoreMain.cpp:707 ]: Passenger core online, PID 6105
+[ 2015-12-08 11:19:45.4236 6110/7f1cb060b780 age/Ust/UstRouterMain.cpp:504 ]: Starting Passenger UstRouter...
+[ 2015-12-08 11:19:45.4241 6110/7f1cb060b780 age/Ust/UstRouterMain.cpp:317 ]: Passenger UstRouter online, PID 6110
+2015/12/08 11:19:47 [error] 6120#0: *4 "/home/ubuntu/mywallet/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/12/08 11:20:20 [error] 6120#0: *5 open() "/home/ubuntu/mywallet/config/public/users/new" failed (2: No such file or directory), client: 80.113.156.124, server: _, request: "GET /users/new HTTP/1.1", host: "ec2-52-29-67-135.eu-central-1.compute.amazonaws.com"
+2015/12/08 11:20:20 [error] 6120#0: *5 open() "/home/ubuntu/mywallet/config/public/favicon.ico" failed (2: No such file or directory), client: 80.113.156.124, server: _, request: "GET /favicon.ico HTTP/1.1", host: "ec2-52-29-67-135.eu-central-1.compute.amazonaws.com", referrer: "http://ec2-52-29-67-135.eu-central-1.compute.amazonaws.com/users/new"
+2015/12/08 11:20:23 [error] 6120#0: *5 "/home/ubuntu/mywallet/config/public/index.html" is not found (2: No such file or directory), client: 80.113.156.124, server: _, request: "GET / HTTP/1.1", host: "ec2-52-29-67-135.eu-central-1.compute.amazonaws.com"
+
+[ 2015-12-08 11:20:38.4181 6105/7f7951d7d700 age/Cor/CoreMain.cpp:507 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-12-08 11:20:38.4182 6105/7f7953dd4780 age/Cor/CoreMain.cpp:876 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-12-08 11:20:38.4182 6105/7f795157c700 Ser/Server.h:759 ]: [ApiServer] Freed 0 spare client objects
+[ 2015-12-08 11:20:38.4182 6105/7f795157c700 Ser/Server.h:444 ]: [ApiServer] Shutdown finished
+[ 2015-12-08 11:20:38.4183 6105/7f7951d7d700 Ser/Server.h:759 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2015-12-08 11:20:38.4183 6105/7f7951d7d700 Ser/Server.h:444 ]: [ServerThr.1] Shutdown finished
+[ 2015-12-08 11:20:38.4186 6105/7f7953dd4780 age/Cor/CoreMain.cpp:942 ]: Passenger core shutdown finished
+
+[ 2015-12-08 11:20:38.4189 6110/7f1cae793700 age/Ust/UstRouterMain.cpp:397 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-12-08 11:20:38.4189 6110/7f1cb060b780 age/Ust/UstRouterMain.cpp:467 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-12-08 11:20:38.4190 6110/7f1cadf92700 Ser/Server.h:759 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2015-12-08 11:20:38.4190 6110/7f1cadf92700 Ser/Server.h:444 ]: [UstRouterApiServer] Shutdown finished
+[ 2015-12-08 11:20:38.4191 6110/7f1cae793700 Ser/Server.h:444 ]: [UstRouter] Shutdown finished
+[ 2015-12-08 11:20:38.4192 6110/7f1cb060b780 age/Ust/UstRouterMain.cpp:498 ]: Passenger UstRouter shutdown finished
+[ 2015-12-08 11:21:07.1532 6200/7effa53f6780 age/Wat/WatchdogMain.cpp:1276 ]: Starting Passenger watchdog...
+[ 2015-12-08 11:21:07.1568 6203/7f812b87f780 age/Cor/CoreMain.cpp:957 ]: Starting Passenger core...
+[ 2015-12-08 11:21:07.1569 6203/7f812b87f780 age/Cor/CoreMain.cpp:234 ]: Passenger core running in multi-application mode.
+[ 2015-12-08 11:21:07.1581 6203/7f812b87f780 age/Cor/CoreMain.cpp:707 ]: Passenger core online, PID 6203
+[ 2015-12-08 11:21:07.1622 6208/7f3f41ac5780 age/Ust/UstRouterMain.cpp:504 ]: Starting Passenger UstRouter...
+[ 2015-12-08 11:21:07.1625 6208/7f3f41ac5780 age/Ust/UstRouterMain.cpp:317 ]: Passenger UstRouter online, PID 6208
+2015/12/08 11:21:09 [error] 6218#0: *4 "/home/ubuntu/mywallet/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/12/08 11:21:15 [error] 6218#0: *5 "/home/ubuntu/mywallet/config/public/index.html" is not found (2: No such file or directory), client: 80.113.156.124, server: _, request: "GET / HTTP/1.1", host: "ec2-52-29-67-135.eu-central-1.compute.amazonaws.com"
+
+[ 2015-12-08 11:25:53.0934 6203/7f8129828700 age/Cor/CoreMain.cpp:507 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-12-08 11:25:53.0935 6203/7f812b87f780 age/Cor/CoreMain.cpp:876 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-12-08 11:25:53.0935 6203/7f8129027700 Ser/Server.h:759 ]: [ApiServer] Freed 0 spare client objects
+[ 2015-12-08 11:25:53.0935 6203/7f8129027700 Ser/Server.h:444 ]: [ApiServer] Shutdown finished
+[ 2015-12-08 11:25:53.0936 6203/7f8129828700 Ser/Server.h:759 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2015-12-08 11:25:53.0936 6203/7f8129828700 Ser/Server.h:444 ]: [ServerThr.1] Shutdown finished
+[ 2015-12-08 11:25:53.0940 6203/7f812b87f780 age/Cor/CoreMain.cpp:942 ]: Passenger core shutdown finished
+
+[ 2015-12-08 11:25:53.0943 6208/7f3f3fc4d700 age/Ust/UstRouterMain.cpp:397 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-12-08 11:25:53.0943 6208/7f3f41ac5780 age/Ust/UstRouterMain.cpp:467 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-12-08 11:25:53.0943 6208/7f3f3f44c700 Ser/Server.h:759 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2015-12-08 11:25:53.0943 6208/7f3f3f44c700 Ser/Server.h:444 ]: [UstRouterApiServer] Shutdown finished
+[ 2015-12-08 11:25:53.0944 6208/7f3f3fc4d700 Ser/Server.h:444 ]: [UstRouter] Shutdown finished
+[ 2015-12-08 11:25:53.0945 6208/7f3f41ac5780 age/Ust/UstRouterMain.cpp:498 ]: Passenger UstRouter shutdown finished
