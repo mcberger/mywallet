@@ -16,7 +16,7 @@ class CardsController < ApplicationController
 	def remove_card
 		card = Card.find(params[:id])
 		current_user.cards.delete(card)
-		redirect_to user_cards
+		redirect_to user_cards_path current_user
 		# get the user
 		# delete card from user's cards
 		# redirect
@@ -25,7 +25,7 @@ class CardsController < ApplicationController
 	def add_card
 		@card = Card.find(params[:id])
 		current_user.cards << @card
-		redirect_to user_cards
+		redirect_to user_cards_path current_user
 	end
 
 	def create

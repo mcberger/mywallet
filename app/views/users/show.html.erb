@@ -1,21 +1,39 @@
-<b>First name: </b><%= @user.fname %>
-<br>
-<b>Last name: </b><%= @user.lname %>
-<br>
-<b>Email: </b><%= @user.email %>
-<br>
-<b>Phone number: </b><%= @user.phone %>
-<br>
-<b>Avatar: </b><%= image_tag @user.avatar.url(:thumb) %>
-<br><br>
+<div class="row">
+	<div class="col-md-6">
 
-<%= link_to 'Add card', new_user_card_path(@user) %>
+		<b>First name: </b><%= @user.fname %>
+		<br>
+		<b>Last name: </b><%= @user.lname %>
+		<br>
+		<b>Email: </b><%= @user.email %>
+		<br>
+		<b>Phone number: </b><%= @user.phone %>
+		<br>
+		<b>Avatar: </b><%= image_tag @user.avatar.url(:thumb) %>
+		<br><br>
+
+		<%= link_to 'Add card', new_user_card_path(@user), :class => "btn btn-default" %>
+	</div>
+
+	<div class="col-md-6">
+		<% if current_user == @user %>
+			<h2> Your cards: </h2> 
+		<% else %>
+			<h2> <%= @user.fname %>'s cards: </h2>
+		<% end %>
+
+		<% @user.cards.each do |card| %>
+			<%= render 'cards/card', card: card %>
+		<% end %>
 
 
-<h2> Your cards: </h2>
-<% @user.cards.each do |card| %>
-	<%= render 'cards/card', card: card %>
-<% end %>
+		<% if current_user == @user %>
+			<h2> Your balance: </h2> 
+		<% else %>
+			<h2> <%= @user.fname %>'s balance: </h2>
+		<% end %>
 
-<h2> Your balance: </h2>
-<%= @balance %>
+		<%= @balance %>
+	</div>
+
+</div>

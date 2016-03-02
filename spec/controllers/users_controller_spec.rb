@@ -27,20 +27,6 @@ RSpec.describe UsersController, :type => :controller do
 		end
 	end
 
-	describe "DELETE destroy" do
-		it "destroys the requested user" do
-			user = create(:user)
-			delete :destroy, {id: 1}, valid_session
-			expect(User.all).to eq([])
-		end
-
-		it "redirects to the user list" do
-			user = create(:user)
-			delete :destroy, {id: 1}, valid_session
-			expect(response).to redirect_to users_path
-		end
-	end
-
 	describe "POST create" do
 		it "check that @user is assigned" do
 			post :create, {user: attributes_for(:user)}, valid_session
@@ -58,6 +44,19 @@ RSpec.describe UsersController, :type => :controller do
 		end
 	end
 
+	describe "DELETE destroy" do
+		it "destroys the requested user" do
+			user = create(:user)
+			delete :destroy, {id: 1}, valid_session
+			expect(User.all).to eq([])
+		end
+
+		it "redirects to the user list" do
+			user = create(:user)
+			delete :destroy, {id: 1}, valid_session
+			expect(response).to redirect_to users_path
+		end
+	end
 
 end
 

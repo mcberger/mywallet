@@ -5,5 +5,5 @@ FactoryGirl.define do
 		email "test@test.com"
 		password "testtest"
 		phone 612345678
-	end	
+	end
 end
